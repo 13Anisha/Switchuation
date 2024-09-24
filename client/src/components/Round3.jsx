@@ -37,7 +37,7 @@ const Round3 = () => {
     <div className="container">
       <h1 className="mt-4">Round 3 Form</h1>
       <p>Download the Round 3 template to submit your report file:</p>
-      <a href="/files/switchuationRound3.pdf" className="btn btn-link" download>Report Template</a>
+      <a href="/files/SwitchuationRound3.pdf" className="btn btn-link" download>Report Template</a>
 
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="form-group mb-3">

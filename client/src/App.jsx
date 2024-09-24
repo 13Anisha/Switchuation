@@ -24,7 +24,7 @@ function App() {
       setUser(user);
       if (user) {
         try {
-          const response = await axios.get(`http://localhost:5000/api/users/${user.email}`);
+          const response = await axios.get(`https://switchuation.onrender.com/api/users/${user.email}`);
           setCurrentUser(response.data);
           // Check if the user has already registered a team
           if (response.data.hasRegistered) { // Assuming this field exists in your user data

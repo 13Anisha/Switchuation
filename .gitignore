@@ -27,4 +27,4 @@ yarn-error.log*
 # IDE folders
 .idea/
 server/.env
-client/src/.firebase.js
+# client/src/.firebase.js

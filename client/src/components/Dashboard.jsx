@@ -11,7 +11,7 @@ const Dashboard = ({ currentUser }) => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/teams');
+        const response = await axios.get('https://switchuation.onrender.com/api/teams');
         setTeams(response.data);
       } catch (error) {
         setError('Failed to fetch teams.');
@@ -26,9 +26,9 @@ const Dashboard = ({ currentUser }) => {
     setLoading(true); // Start loading
 
     try {
-      const response = await axios.post('http://localhost:5000/api/teams/shuffle');
+      const response = await axios.post('https://switchuation.onrender.com/api/teams/shuffle');
       if (response.data.message === 'Zip and report files shuffled successfully') {
-        const updatedTeams = await axios.get('http://localhost:5000/api/teams');
+        const updatedTeams = await axios.get('https://switchuation.onrender.com/api/teams');
         setTeams(updatedTeams.data);
         setSuccess('Ideas and PDFs shuffled successfully!');
       } else {
@@ -78,7 +78,7 @@ const Dashboard = ({ currentUser }) => {
                     <td>{team.team_id}</td>
                     <td>
                       {team.zip_folder_path ? (
-                        <a href={`http://localhost:5000/${getFileName(team.zip_folder_path)}`} className="btn btn-link">
+                        <a href={`https://switchuation.onrender.com/${getFileName(team.zip_folder_path)}`} className="btn btn-link">
                           {getFileName(team.zip_folder_path)}
                         </a>
                       ) : (
@@ -87,7 +87,7 @@ const Dashboard = ({ currentUser }) => {
                     </td>
                     <td>
                       {team.report_file_path ? (
-                        <a href={`http://localhost:5000/${getFileName(team.report_file_path)}`} className="btn btn-link">
+                        <a href={`https://switchuation.onrender.com/${getFileName(team.report_file_path)}`} className="btn btn-link">
                           {getFileName(team.report_file_path)}
                         </a>
                       ) : (

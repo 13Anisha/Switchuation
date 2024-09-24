@@ -34,7 +34,7 @@ const signInWithGoogle = () => {
 
         // Send the user email to the backend to store in MongoDB
         try {
-          await axios.post('http://localhost:5000/api/users', { email });
+          await axios.post('https://switchuation.onrender.com/api/users', { email });
           console.log('User sent to backend for storage');
         } catch (error) {
           console.error('Error sending user to backend:', error);

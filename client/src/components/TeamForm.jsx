@@ -32,7 +32,7 @@ const TeamForm = ({ setHasRegistered }) => { // Accept setHasRegistered as a pro
     }));
 
     try {
-      const { data } = await axios.post('http://localhost:5000/api/teams/submit', {
+      const { data } = await axios.post('https://switchuation.onrender.com/api/teams/submit', {
         team_name: teamName,
         team_member_size: teamSize,
         team_members: membersData,

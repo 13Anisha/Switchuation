@@ -21,7 +21,7 @@ const Round1 = () => {
     console.log('Submitting Team ID:', teamId);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/round1/submit', formData, {
+      const response = await axios.post('https://switchuation.onrender.com/api/round1/submit', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

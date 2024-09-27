@@ -9,7 +9,7 @@ const SideBarDash = () => {
     setIsCollapsed(!isCollapsed);
   };
  //disable rounds
-  const disabledRounds = ['round2', 'round3', 'round4'];
+  const disabledRounds = ['round1', 'round3', 'round4'];
 
   return (
     <div className={`d-flex ${isCollapsed ? 'sidebar-collapsed' : 'sidebar-expanded'}`} 
@@ -43,8 +43,8 @@ const SideBarDash = () => {
           <>
             <h3 className="text-center mt-2 mb-3" style={{ fontSize: '1.2rem' }}>Dashboard</h3>
             <ul className="list-unstyled d-flex flex-column align-items-center">
-              <li className="mb-2"><Link to="/round1" className="text-decoration-none">Round 1</Link></li>
-              <li className="mb-2"><Link to="/round2" className="text-decoration-none" style={disabledRounds.includes('round2') ? { pointerEvents: 'none', color: 'grey' } : {}}>Round 2</Link></li>
+              <li className="mb-2"><Link to="/round1" className="text-decoration-none" style={disabledRounds.includes('round1') ? { pointerEvents: 'none', color: 'grey' } : {}}>Round 1</Link></li>
+              <li className="mb-2"><Link to="/round2" className="text-decoration-none" >Round 2</Link></li>
               <li className="mb-2"><Link to="/round3" className="text-decoration-none" style={disabledRounds.includes('round3') ? { pointerEvents: 'none', color: 'grey' } : {}}>Round 3</Link></li>
               <li className="mb-2"><Link to="/round4" className="text-decoration-none" style={disabledRounds.includes('round4') ? { pointerEvents: 'none', color: 'grey' } : {}}>Round 4</Link></li>
             </ul>

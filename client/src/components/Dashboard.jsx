@@ -78,7 +78,7 @@ const Dashboard = ({ currentUser }) => {
                     <td>{team.team_id}</td>
                     <td>
                       {team.zip_folder_path ? (
-                        <a href={`https://switchuation.onrender.com/uploads/${getFileName(team.zip_folder_path)}`} className="btn btn-link">
+                        <a href={`https://switchuation.onrender.com/${getFileName(team.zip_folder_path)}`} className="btn btn-link">
                           {getFileName(team.zip_folder_path)}
                         </a>
                       ) : (
@@ -87,7 +87,7 @@ const Dashboard = ({ currentUser }) => {
                     </td>
                     <td>
                       {team.report_file_path ? (
-                        <a href={`https://switchuation.onrender.com/uploads/${getFileName(team.report_file_path)}`} className="btn btn-link">
+                        <a href={`https://switchuation.onrender.com/${getFileName(team.report_file_path)}`} className="btn btn-link">
                           {getFileName(team.report_file_path)}
                         </a>
                       ) : (

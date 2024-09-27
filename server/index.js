@@ -12,6 +12,7 @@ import nodemailer from 'nodemailer';
 
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import path from 'path';
 
 
 
@@ -29,7 +30,7 @@ app.use(cors({
 app.options('*', cors());
 
 app.use(express.json());
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
 
 // Getting __dirname in ES module
 const __filename = fileURLToPath(import.meta.url);
@@ -37,6 +38,7 @@ const __dirname = dirname(__filename);
 
 // Serve static files from the 'public/files' directory
 app.use('/files', express.static(join(__dirname, 'public/files')));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 
